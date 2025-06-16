@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 Exercises</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+        function Message({message}) {
+            return (
+                <div>
+                    {message}
+                </div>
+            );
+        }
+
+        function EmailInput() {
+            return (
+                <div>
+                    <input type="email" placeholder="Email" />
+                </div>
+            );
+        }
+
+        function PasswordInput() {
+            return (
+                <div>
+                    <input type="password" placeholder="Password" />
+                </div>
+            );
+        }
+
+        function LoginForm() {
+            return (
+                <>
+                    <EmailInput />
+                    <PasswordInput />
+                    <button>Login</button>
+                    <button>Sign up</button>
+                </>
+            );
+        }
+
+        function App() {
+            return (
+                <>
+                    <Message message="Hello, welcome to my website" />
+                    <LoginForm />
+                </>
+            );
+        }
+
+        const container = document.querySelector('.container');
+        ReactDOM.createRoot(container).render(<App />);
+    </script>
+</body>
+</html>
